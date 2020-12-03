@@ -24,7 +24,7 @@ export class Contact extends Component {
     
     handlesubmit=(e)=>{
         e.preventDefault();
-        // console.log(this.state)
+        console.log(this.state)
         axios.post('http://localhost:5000/sendfeedback/',this.state)
         .then(res=>console.log(res.data))
         .catch(err=>console.log(err))

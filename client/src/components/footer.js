@@ -13,7 +13,7 @@ export default function footer(){
                                     <p className = "text-capitalize">copyright &copy; Apni Dukaan {new Date().getFullYear}. all rights reserved</p>
                                 </div>
                             <div className = "col-md-6 d-flex justify-content-around">
-                                {value.socialicons.map(item => <a href = {item.path} key = {item.id}>{item.icon}</a>)}
+                                {value.socialicons.map(item => <a href = {item.path}>{item.icon}</a>)}
                                 </div>
                             </div>
                         </div>
