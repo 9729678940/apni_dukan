@@ -13,7 +13,7 @@ export default function Sidebar(){
                             {links.map(link => {
                                 return (
                                     <li key = {link.id}>
-                                        <Link to = {link.path} onClick = {handlesidebar} className = "sidebar-link">{link.text}</Link>
+                                        <a href={`${link.path}`} onClick={handlesidebar} className = "sidebar-link">{link.text}</a>
                                     </li>
                                 )
                             })}
