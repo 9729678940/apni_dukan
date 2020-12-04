@@ -1,12 +1,9 @@
 const express=require('express')
 const app=express()
 const mongoose=require('mongoose')
-const {
-    Feedback,
-    Kart
-} = require('./models/feedback')
+const Feedbacks = require('./models/feedback')
 
-const {dburl} = requre('./keys')
+const {dburl} = require('./keys')
 
 mongoose.connect(dburl,{ useFindAndModify: false ,useNewUrlParser:true,useUnifiedTopology:true})
 .then((result)=>{console.log('connected');})
@@ -27,7 +24,8 @@ app.get('/',(req,res)=>{
     res.end()
 })
 app.post('/sendfeedback',async (req,res)=>{
-    const fi= await new Feedback(req.body).save()
+    const fi=  new Feedbacks(req.body)
+    fi.save()
     res.json("saved")
     res.end()
 })
