@@ -1,5 +1,5 @@
 const mongoose=require('mongoose')
-const Schema=mongoose.Schema()
+const Schema=mongoose.Schema
 
 const feedbackschema=new Schema({
     
@@ -21,5 +21,5 @@ const feedbackschema=new Schema({
     }
 })
 
-const Feedbacks=mongoose.Model('Feedback',feedbackschema)
-module.export=Feedbacks
+const Feedbacks=mongoose.model('feedback',feedbackschema)
+module.exports=Feedbacks
