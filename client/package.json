@@ -8,20 +8,21 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
+    "css-loader": "^3.6.0",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.1.0",
     "react-paypal-express-checkout": "^1.0.5",
+    "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "react-toastify": "^6.1.0",
+    "regenerator-runtime": "^0.13.7",
+    "style-loader": "^1.2.1",
     "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4",
-    "css-loader": "^3.6.0",
-    "prop-types": "^15.7.2",
-    "react-redux": "^7.2.0",
-    "style-loader": "^1.2.1",
-    "webp-loader": "^0.6.0",
-    "regenerator-runtime": "^0.13.7"
+    "webp-loader": "^0.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
@@ -40,8 +41,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "webpack --mode development --watch ./src/index.js --output ../server/templates/main.js",
-    "prod": "webpack --mode production ./src/index.js --output ../server/templates/main.js"
+    "dev": "webpack --mode development --watch ./src/index.js --output ../server/static/main.js",
+    "prod": "webpack --mode production ./src/index.js --output ../server/static/main.js"
   },
   "eslintConfig": {
     "extends": [

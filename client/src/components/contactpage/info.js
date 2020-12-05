@@ -1,6 +1,8 @@
 import Title from "../title"
 import axios from "axios"
 import React, { Component } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export class Contact extends Component {
     
@@ -28,6 +30,11 @@ export class Contact extends Component {
         axios.post('http://localhost:5000/sendfeedback/',this.state)
         .then(res=>console.log(res.data))
         .catch(err=>console.log(err))
+        const forms=document.getElementsByClassName('form-control')
+        toast("Thanks For Your FeedBack");
+        for (let i = 0; i < forms.length; i++) {
+            forms[i].value=""
+        }
     }
 
     
@@ -47,6 +54,7 @@ export class Contact extends Component {
                     </form>
                 </div>
                 </div>
+                <ToastContainer />
             </section>
         )
     }
